@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1423454701 source:/home/dae/data2014/lab09/pair_ex/main.cpp
+	<iostream>
+	"pair.h"
+
+1423454890 /home/dae/data2014/lab09/pair_ex/pair.h
+	<stdexcept>
+	<iostream>
+
