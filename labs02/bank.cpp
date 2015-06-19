@@ -42,18 +42,22 @@ int main() {
       }
     }
     if (serve[min] == 0) {
-      cout << "assign cutomer " << clients[count].first << " to servers " << servers[min].first << endl;;
-      serve[min] = servers[min].second * clients[min].second;
+      cout << "  assign cutomer " << clients[count].first << " to servers " << servers[min].first << endl;;
+      serve[min] = servers[min].second * clients[count].second;
       ans[count].first = servers[min].first;
-      ans[count].second= time + servers[min].second * clients[min].second;
+      ans[count].second= time + servers[min].second * clients[count].second;
       count++;
       remain--;
     } else {
-      cout << " there is no available server" << endl;
+      cout << "  there is no available server" << endl;
       for (size_t i = 0;i < serve.size();i++) {
         serve[i]--;
       }
       time++;
     }
+  }
+  for (size_t i = 0;i < ans.size();i++) {
+    cout << "Customer " << clients[i].first << " is served by " << ans[i].first << " finished at " << ans[i].second << endl;
+
   }
 }
