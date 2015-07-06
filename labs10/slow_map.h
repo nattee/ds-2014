@@ -11,7 +11,7 @@ class slow_map {
     std::vector<pair<KeyT,MappedT> > v;
 
   public:
-    typedef std::vector<pair<KeyT,MappedT>>::iterator     iterator;
+    typedef typename std::vector<pair<KeyT,MappedT>>::iterator     iterator;
     slow_map() { }
 
     ~slow_map() { }
