@@ -17,12 +17,15 @@ void insert(size_t k,int val,CP::node<int>* &start) {
 
 int main() {
   CP::node<int> *start;
+
+
+
   start = new CP::node<int>(10,
       new CP::node<int>(20,
         new CP::node<int>(30,
           new CP::node<int>(40,NULL))));
 
-  insert(0,100,start);
+  delete start->data;
 
 
 
